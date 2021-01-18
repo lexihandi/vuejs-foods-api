@@ -87,6 +87,30 @@
           </div>
         </div>
       </div>
+
+      <!-- form checkout -->
+      <div class="row justify-content-end">
+        <div class="col-md-4">
+          <form class="mt-4" v-on:submit.prevent>
+            <div class="form-group">
+              <label for="nama">Nama: </label>
+              <input type="text" class="form-control" v-model="pesan.nama" />
+            </div>
+
+            <div class="form-group">
+              <label for="noMeja">No Meja: </label>
+              <input type="text" class="form-control" v-model="pesan.noMeja" />
+            </div>
+            <button
+              class="btn btn-success float-right"
+              type="submit"
+              @click="checkout"
+            >
+              Pesan Sekarang
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -102,6 +126,7 @@ export default {
   data() {
     return {
       keranjangs: [],
+      pesan: {},
     };
   },
   methods: {
@@ -125,6 +150,36 @@ export default {
             .catch((error) => console.log("error:", error));
         })
         .catch((error) => console.log("error:", error));
+    },
+    checkout() {
+      if (this.pesan.nama && this.pesan.noMeja) {
+        this.pesan.keranjangs = this.keranjangs;
+        axios
+          .post("http://localhost:3000/pesanans", this.pesan)
+          .then(() => {
+            // Hapus Semua Keranjang
+            this.keranjangs.map((item) => {
+              return axios
+                .delete("http://localhost:3000/keranjangs/" + item.id)
+                .catch((error) => console.log(error));
+            });
+            this.$router.push({ path: "/pesanan-sukses" });
+            this.$toast.success("Sukses Dipesan", {
+              type: "success",
+              position: "top-right",
+              duration: 3000,
+              dismissible: true,
+            });
+          })
+          .catch((err) => console.log(err));
+      } else {
+        this.$toast.error("Nama dan Nomor Meja Harus diisi", {
+          type: "error",
+          position: "top-right",
+          duration: 3000,
+          dismissible: true,
+        });
+      }
     },
   },
   mounted() {

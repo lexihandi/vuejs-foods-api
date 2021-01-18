@@ -100,5 +100,115 @@
     }
   ],
   "keranjangs": [],
-  "pesanans": []
+  "pesanans": [
+    {
+      "nama": "sd",
+      "noMeja": "1",
+      "keranjangs": [
+        {
+          "jumlah_pemesanan": "4",
+          "products": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Nasi Goreng Telur",
+            "harga": 14000,
+            "is_ready": true,
+            "gambar": "nasi-goreng-telor.jpg"
+          },
+          "id": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "nama": "ad",
+      "noMeja": "12",
+      "keranjangs": [
+        {
+          "jumlah_pemesanan": "4",
+          "products": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Nasi Goreng Telur",
+            "harga": 14000,
+            "is_ready": true,
+            "gambar": "nasi-goreng-telor.jpg"
+          },
+          "id": 1
+        }
+      ],
+      "id": 2
+    },
+    {
+      "nama": "asd",
+      "noMeja": "12",
+      "keranjangs": [
+        {
+          "jumlah_pemesanan": "4",
+          "products": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Nasi Goreng Telur",
+            "harga": 14000,
+            "is_ready": true,
+            "gambar": "nasi-goreng-telor.jpg"
+          },
+          "id": 1
+        }
+      ],
+      "id": 3
+    },
+    {
+      "nama": "asd",
+      "noMeja": "12",
+      "keranjangs": [
+        {
+          "jumlah_pemesanan": "12",
+          "keterangan": "pedas",
+          "products": {
+            "id": 1,
+            "kode": "K-01",
+            "nama": "Sate Ayam",
+            "harga": 16000,
+            "is_ready": true,
+            "gambar": "sate-ayam.jpg"
+          },
+          "id": 1
+        }
+      ],
+      "id": 4
+    },
+    {
+      "nama": "lexy",
+      "noMeja": "12",
+      "keranjangs": [
+        {
+          "jumlah_pemesanan": "4",
+          "keterangan": "pedas",
+          "products": {
+            "id": 2,
+            "kode": "K-02",
+            "nama": "Nasi Goreng Telur",
+            "harga": 14000,
+            "is_ready": true,
+            "gambar": "nasi-goreng-telor.jpg"
+          },
+          "id": 1
+        },
+        {
+          "jumlah_pemesanan": "2",
+          "products": {
+            "id": 6,
+            "kode": "K-06",
+            "nama": "Bakso",
+            "harga": 10000,
+            "is_ready": true,
+            "gambar": "bakso.jpg"
+          },
+          "id": 2
+        }
+      ],
+      "id": 5
+    }
+  ]
 }
